@@ -15,7 +15,13 @@ const userSchema = new mongoose.Schema({
         type: String,
         require: true,
     },
-}, { timestamps: true });
+    avatar: {
+        type: String,
+        default: "https://lh3.googleusercontent.com/a/ACg8ocL4MjUSP_4REezYbRIx4RMQQ19avGyD6Zg8oYBgN_oiTGUlspI=s96-c"
+    },
+  }, 
+  { timestamps: true }
+);
 
 const User = mongoose.model('User', userSchema);
 
